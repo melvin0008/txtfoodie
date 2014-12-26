@@ -10,7 +10,7 @@ Twilio.configure do |config|
   config.auth_token = ENV['AUTH_TOKEN']
 end
 
-get '/receive' do
+post '/receive' do
 	#@client= Twilio::REST::Client.new
 	message=params[:Body].split(' ')
 	if message.length ==1
@@ -26,4 +26,4 @@ end
 # 			to:params[:From],
 # 			body:'Yalla')
 #curl -X POST https://api.twilio.com/2010-04-01/Accounts/AC7ce5e0e39730f8a683247bd5fcd50e29/Messages -d "To=+16179528889" -d "From=+15005550006" -d "Body=Hello" -u 'AC7ce5e0e39730f8a683247bd5fcd50e29:c2daecaf9d24322e41c1208006e41466'
-#curl -X POST https://txtfoodie.herokuapp.com/receive -d "Body='yalla'"
+#curl -X POST https://txtfoodie.herokuapp.com/receive -d "Body=yalla"
