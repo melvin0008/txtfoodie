@@ -17,7 +17,7 @@ get '/receive' do
 		foodquery=message[0]
 		@client.messages.create(
 			from:ENV['MY_NUMBER'],
-			to:params[:From],
+			to:"+919049733143",
 			body:"Yalla"
 			)
 	end
