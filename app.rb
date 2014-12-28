@@ -7,9 +7,9 @@ end
 
 
 
-get '/receive' do
-	# txtmessage=params[:txtweb-mobile]
+get '/receive/:txtweb-message' do
+	txtmessage=params[:txtweb-message]
 	# mobileno=params[:txtweb-message]
 	# erb :txtfoodie, :locals => { :txtmessage => txtmessage, :mobileno=> mobileno}
-	erb :txtfoodie
+	erb :txtfoodie , :locals => { :txtmessage => txtmessage}
 end
